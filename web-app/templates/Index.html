@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link href="{{url_for('static',filename='style.css')}}" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" href="{{url_for('static',filename='style1.css')}}">
+        <script type="text/javascript" language="javascript" src="{{url_for('static',filename='script.js')}}" >
+
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+        </script>
+    </head>
+    <body>
+        <div class="loading">
+            <!-- partial:index.partial.html -->
+<div class="loader">
+    <div style="--i: 1"></div>
+    <div style="--i: 2"></div>
+    <div style="--i: 3"></div>
+    <div style="--i: 4"></div>
+  </div>
+<!-- partial -->
+        </div>
+        
+        <h2 >MALICIOUS URL DETECTOR</h2>
+        <H3>ABOUT US:</H3>
+            <p>Since the web service is essential in our daily lives, cyber security is more important in this digital world. Malicious URL is common threat and very serious to cyber security. Malicious URLs have been widely used to mount various cyber attacks including spamming, phishing and malware.Our system effectively detects the malicious urls using our model. Also this model recognizes the IDN homograph attacks. Our method uses a variety of discriminative features including textual properties, link structure, web contents, DNS information and network traffic.</p>
+            <i class="fa fa-link " aria-hidden="true" id="link">
+            <img src="{{url_for('static',filename='icon.png')}}" id="bg_img" alt="icon"/>
+       </i>
+       <form method="post" action="predict">
+       <input type="text" id="url_fld" placeholder="Enter any url" name="url"/><br/>
+       <button type="submit" onClick="clicke()" id="btn">CHECK</button></form>
+    </body>
+       
+</html>
